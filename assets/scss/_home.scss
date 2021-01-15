@@ -2,12 +2,13 @@
     padding: 170px 0 160px;
     text-align: center;
     .bannerHomeInner {
-        max-width: 950px;
+        // max-width: 950px;
         margin-left: auto;
         margin-right: auto;
     }
     h1 {
         margin-bottom: 25px;
+        font-weight: 600;
     }
     h6 {
         margin-bottom: 60px;
@@ -122,6 +123,343 @@
             right: -10px;
             bottom: 45px;
             background-image: url(../images/qDown.png);
+        }
+    }
+}
+
+.aboutHosts {
+    background-image: url(../images/aboutHostsBg.jpg);
+    @extend .bgImg;
+    padding: 75px 0;
+    @include min-576 {
+        padding: 75px 0 0;
+    }
+    @include min-1200 {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .aboutHostsItem {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 20px 0 0;
+        @include min-576 {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        .aboutHostsItemImg {
+            width: 100%;
+            @include min-576 {
+                width: 40%;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+                @include max-575 {
+                    width: 100%;
+                }
+            }
+        }
+        .aboutHostsItemText {
+            width: 100%;
+            padding: 10px 0 0 0;
+            @include min-576 {
+                width: 60%;
+                padding: 0 0 0 10px;
+            }
+            h5 {
+                margin: 0 0 13px;
+                color: $secondaryColor;
+                font-weight: bold;
+            }
+            p {
+                margin: 0;
+                color: $whiteLight;
+                font-weight: 500;
+                text-align: left;
+                @include min-1200 {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}
+.asSeenOn {
+    padding: 40px 0 60px;
+    @include min-1200 {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    h6 {
+        color: $gray3;
+    }
+    .asSeenOnItem {
+        padding: 35px 0 0;
+        text-align: center;
+         img {
+             display: block;
+             max-width: 100%;
+             margin: 0 auto;
+         }
+    }
+}
+
+.qouteSec {
+    background-image: url(../images/qouteSecBg.jpg);
+    @extend .bgImg;
+    .qouteSecInner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .qouteSecImg {
+        width: 100%;
+        @include min-768 {
+            width: 275px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .qouteSecText {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        width: 100%;
+        @include min-768 {
+            width: -webkit-calc(100% - 275px);
+            width: calc(100% - 275px);
+        }
+        @include min-1200 {
+            padding-left: 70px;
+        }
+        p {
+            position: relative;
+            padding: 0 60px;
+            text-align: left;
+            @include min-1200 {
+                font-size: 0.75rem;
+            }
+            &:before, &:after {
+                content: "";
+                width: 36px;
+                height: 36px;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+            }
+            &:before {
+                background-image: url(../images/qUp.png);
+                left: 0;
+                top: 0;
+            }
+            &:after {
+                background-image: url(../images/qDown.png);
+                right: 0;
+                bottom: 0;
+            }
+        }
+        .qouteSecTextBottom {
+            text-align: right;
+            font-size: 1rem;
+            font-weight: bold;
+            color: $black;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            h6 {
+                font-weight: bold;
+            }
+            div {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.recap {
+    padding: 90px 0 30px;
+    .recapItem {
+        padding: 40px 30px;
+        position: relative;
+        max-width: 650px;
+        margin: 30px auto 0;
+    }
+    .recapItemLeft {
+        border: 1px solid $blue;
+        h3 {
+            padding: 0 60px;
+            background-color: $white;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+        h6 {
+            margin: 20px 0;
+        }
+        .recapItemLeftItems {
+            padding: 30px 0;
+            .recapItemLeftItem {
+                padding: 15px;
+                border-bottom: 2px solid $primaryColor;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                .recapItemLeftItemTitle {
+                    width: 130px;
+                    color: $blueLight;
+                    font-size: 1.25rem;
+                    line-height: 1.4375rem;
+                    padding: 5px 0 0;
+                }
+                .recapItemLeftItemText {
+                    font-size: 1.875rem;
+                    line-height: 2.25rem;
+                    color: $primaryColor;
+                    font-family: $secondaryFont;
+                    width: -webkit-calc(100% - 130px);
+                    width: calc(100% - 130px);
+                }
+            }
+        }
+    }
+    .recapItemRight {
+        // @include min-1200 {
+        //     margin-right: -15px;
+        // }
+        &.recapQout {
+            background-image: url(../images/recapQoutBg.jpg);
+            @extend .bgImg;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            .recapQoutText {
+                position: relative;
+                padding: 20px 60px;
+                width: 100%;
+                @include min-576 {
+                    width: -webkit-calc(100% - 140px);
+                    width: calc(100% - 140px);
+                }
+                @include min-768 {
+                    width: -webkit-calc(100% - 240px);
+                    width: calc(100% - 240px);
+                }
+                p {
+                    color: $gray;
+                    margin-bottom: 10px;
+                    position: relative;
+                    text-align: left;
+                    @include min-1200 {
+                        font-size: 0.75rem;
+                    }
+                    &:before, &:after {
+                        content: "";
+                        width: 36px;
+                        height: 36px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        position: absolute;
+                    }
+                    &:before {
+                        background-image: url(../images/qUp.png);
+                        left: -50px;
+                        top: 0;
+                    }
+                    &:after {
+                        background-image: url(../images/qDown.png);
+                        right: -50px;
+                        bottom: 0;
+                    }
+                }
+                h6 {
+                    font-size: 1.25rem;
+                }
+            }
+            .recapQoutImg {
+                width: 100%;
+                @include min-576 {
+                    width: 140px;
+                }
+                @include min-768 {
+                    width: 240px;
+                }
+                img {
+                    max-width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.webinar {
+    background-image: url(../images/webinarBg.jpg);
+    @extend .bgImg;
+    h3 {
+        font-weight: 500;
+        line-height: 1em;
+        letter-spacing: -2px;
+    }
+    .webinarItem {
+        text-align: center;
+        padding: 45px 0;
+        &.webinarItemLeft {
+            .webinarItemLeftTitle {
+                font-size: 5rem;
+                line-height: 6rem;
+                margin: 20px 0;
+            }
+        }
+        &.webinarItemRight {
+            .webinarItemCard {
+                width: 315px;
+                border: 2px solid $white;
+                border-radius: 8px;
+                @extend .bgImg;
+                color: $white;
+                text-align: center;
+                padding: 15px;
+                margin: 0 auto;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+                h4 {
+                    font-family: $secondaryFont;
+                }
+                p {
+                    margin: 0;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
         }
     }
 }
