@@ -1,5 +1,6 @@
 .bannerHome {
-    padding: 170px 0 160px;
+    // padding: 170px 0 160px;
+    padding: 170px 0 0;
     text-align: center;
     .bannerHomeInner {
         // max-width: 950px;
@@ -12,6 +13,33 @@
     }
     h6 {
         margin-bottom: 60px;
+    }
+    .bannerHomeLogos {
+        margin: 70px 0 0;
+        color: $white;
+        h6 {
+            margin: 0 0 15px;
+        }
+        .bannerHomeLogosInner {
+            background-color: $white;
+            border-radius: 4px 4px 0 0;
+            padding: 10px 0;
+            @include max-991 {
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+            .bannerHomeLogo {
+                img {
+                    max-width: 100%;
+                }
+                @include max-991 {
+                    width: 50%;
+                }
+                @include max-575 {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -92,8 +120,8 @@
         }
         &.getAttedingItem2 {
             @include min-992 {
-                -webkit-transform: translateY(-50% );
-                transform: translateY(-50% );
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
             }
         }
     }
@@ -105,7 +133,8 @@
             font-style: italic;
             margin-bottom: 20px;
         }
-        &:before, &:after {
+        &:before,
+        &:after {
             content: "";
             width: 36px;
             height: 36px;
@@ -200,11 +229,11 @@
     .asSeenOnItem {
         padding: 35px 0 0;
         text-align: center;
-         img {
-             display: block;
-             max-width: 100%;
-             margin: 0 auto;
-         }
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -251,7 +280,8 @@
             @include min-1200 {
                 font-size: 0.75rem;
             }
-            &:before, &:after {
+            &:before,
+            &:after {
                 content: "";
                 width: 36px;
                 height: 36px;
@@ -379,7 +409,8 @@
                     @include min-1200 {
                         font-size: 0.75rem;
                     }
-                    &:before, &:after {
+                    &:before,
+                    &:after {
                         content: "";
                         width: 36px;
                         height: 36px;
